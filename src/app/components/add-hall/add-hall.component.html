@@ -1,0 +1,26 @@
+<div dir="rtl">
+  <div class="row ">
+    <form novalidate (ngSubmit)="addhall()">
+      <div class="input-field col s12">
+        <h5 class="right">اسم القاعة</h5>
+        <input placeholder="القاعة" id="name" type="text" [(ngModel)]="hallls.hallName" name="hallName" class="validate">
+      </div>
+      <div class="input-field col s12">
+        <h5 class="right">عدد الكراسي</h5>
+        <p class="range-field">
+          <input type="range" (change)="text($event.target.value)" id="chairs" value="1" min="1" max="80" step="1" [(ngModel)]="hallls.noOfChais"
+            name="noOfChais" />
+        </p>
+        <h4 class="red center">العدد الأقصى : {{selectednumber}} </h4>
+
+      </div>
+
+      <div class="center">
+        <button class="btn waves-effect green btn-large btn-block" type="submit" name="action">إضافة
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
